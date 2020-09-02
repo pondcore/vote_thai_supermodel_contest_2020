@@ -1,5 +1,6 @@
 import requests, time
 from numpy import random
+
 t=0
 vote = 0
 vote_num = 5
