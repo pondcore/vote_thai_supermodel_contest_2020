@@ -4,7 +4,6 @@ from numpy import random
 t=0
 vote = 0
 vote_num = 5
-e0fc5480-a1e5-4ea5-a59d-6a3d8be8d499
 url = 'https://gz9ofg2pnc.execute-api.ap-southeast-1.amazonaws.com/Prod/api/items/TSM20200304/vote'
 payload0 = {'iid': vote_num, 'uid': 'c6d7f831-71a1-46e6-9e64-2ed8665f0dc5', 'react': 'vote'}
 payload1 = {'iid': vote_num, 'uid': '10fb5ac9-3dcc-4b19-b8bf-e5df4548492c', 'react': 'vote'}
