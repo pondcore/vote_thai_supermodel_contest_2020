@@ -1,10 +1,6 @@
 import requests, time
 from numpy import random
 
-
-
-
-
 t=0
 vote = 0
 vote_num = 5
@@ -23,6 +19,12 @@ payload10 = {'iid': vote_num, 'uid': 'ac74f81e-cdf0-458e-a809-29370000b85a', 're
 payload11 = {'iid': vote_num, 'uid': 'f5447d0c-edcb-4995-889d-8573a2d436ad', 'react': 'vote'}
 payload12 = {'iid': vote_num, 'uid': '30fb5fac-0583-41e3-bd40-5e6f896c8d38', 'react': 'vote'}
 payload13 = {'iid': vote_num, 'uid': '1618cc85-3201-41a5-984a-72f73f131245', 'react': 'vote'}
+payload14 = {'iid': vote_num, 'uid': 'adcd22bd-8d63-4b78-8bce-db2a4d0a4dab', 'react': 'vote'}
+payload15 = {'iid': vote_num, 'uid': 'c7aa764b-41ba-4b5e-8096-6639be366179', 'react': 'vote'}
+payload16 = {'iid': vote_num, 'uid': 'ffccf3bc-666d-4a35-9b38-2b773a688c4a', 'react': 'vote'}
+payload17 = {'iid': vote_num, 'uid': '23d309d7-8442-480a-b41f-45071f813b20', 'react': 'vote'}
+payload18 = {'iid': vote_num, 'uid': '95107163-abb5-4174-ad79-d6aaa65195fd', 'react': 'vote'}
+payload19 = {'iid': vote_num, 'uid': '1ac883f5-ac1c-4c2f-9955-c94237c6d212', 'react': 'vote'}
 r0 = requests.post(url, data=payload0)
 r1 = requests.post(url, data=payload1)
 r2 = requests.post(url, data=payload2)
@@ -37,6 +39,12 @@ r10 = requests.post(url, data=payload10)
 r11 = requests.post(url, data=payload11)
 r12 = requests.post(url, data=payload12)
 r13 = requests.post(url, data=payload13)
+r14 = requests.post(url, data=payload14)
+r15 = requests.post(url, data=payload15)
+r16 = requests.post(url, data=payload16)
+r17 = requests.post(url, data=payload17)
+r18 = requests.post(url, data=payload18)
+r19 = requests.post(url, data=payload19)
 print(r0.json()['list'])
 print(r1.json()['list'])
 print(r2.json()['list'])
@@ -51,6 +59,12 @@ print(r10.json()['list'])
 print(r11.json()['list'])
 print(r12.json()['list'])
 print(r13.json()['list'])
+print(r14.json()['list'])
+print(r15.json()['list'])
+print(r16.json()['list'])
+print(r17.json()['list'])
+print(r18.json()['list'])
+print(r19.json()['list'])
 while(True):
     t+=1
     time.sleep(1)
@@ -89,7 +103,7 @@ while(True):
         r6 = requests.post(url, data=payload6)
         vote += 1
         print(r6.json()['list'])
-    if time.time()*1000 > int(r5.json()['list']['nextVoteTime']) :
+    if time.time()*1000 > int(r7.json()['list']['nextVoteTime']) :
         time.sleep(random.randint(3))
         r7 = requests.post(url, data=payload7)
         vote += 1
@@ -124,6 +138,36 @@ while(True):
         r13 = requests.post(url, data=payload13)
         vote += 1
         print(r13.json()['list'])
+    if time.time()*1000 > int(r14.json()['list']['nextVoteTime']) :
+        time.sleep(random.randint(3))
+        r14 = requests.post(url, data=payload14)
+        vote += 1
+        print(r14.json()['list'])
+    if time.time()*1000 > int(r15.json()['list']['nextVoteTime']) :
+        time.sleep(random.randint(3))
+        r15 = requests.post(url, data=payload15)
+        vote += 1
+        print(r15.json()['list'])
+    if time.time()*1000 > int(r16.json()['list']['nextVoteTime']) :
+        time.sleep(random.randint(3))
+        r16 = requests.post(url, data=payload16)
+        vote += 1
+        print(r16.json()['list'])
+    if time.time()*1000 > int(r17.json()['list']['nextVoteTime']) :
+        time.sleep(random.randint(3))
+        r17 = requests.post(url, data=payload17)
+        vote += 1
+        print(r17.json()['list'])
+    if time.time()*1000 > int(r18.json()['list']['nextVoteTime']) :
+        time.sleep(random.randint(3))
+        r18 = requests.post(url, data=payload18)
+        vote += 1
+        print(r18.json()['list'])
+    if time.time()*1000 > int(r19.json()['list']['nextVoteTime']) :
+        time.sleep(random.randint(3))
+        r19 = requests.post(url, data=payload19)
+        vote += 1
+        print(r19.json()['list'])
     print(vote)
     if t%2 == 0 :
         print('/')
