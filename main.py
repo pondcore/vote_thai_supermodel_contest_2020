@@ -14,6 +14,11 @@ r1 = requests.post(url, data=payload1)
 r2 = requests.post(url, data=payload2)
 r3 = requests.post(url, data=payload3)
 r4 = requests.post(url, data=payload4)
+print(r0.json()['list'])
+print(r1.json()['list'])
+print(r2.json()['list'])
+print(r3.json()['list'])
+print(r4.json()['list'])
 while(True):
     t+=1
     time.sleep(1)
@@ -49,23 +54,3 @@ while(True):
             t = 0
     else:
         print('\\')
-    
-    # if time.time()*1000 > int(r0.json()['list']['nextVoteTime']) :
-    #     time.sleep(random.randint(3))
-    #     r0 = requests.post(url, data=payload0)
-    #     time.sleep(random.randint(3))
-    #     r1 = requests.post(url, data=payload1)
-    #     time.sleep(random.randint(3))
-    #     r2 = requests.post(url, data=payload2)
-    #     time.sleep(random.randint(3))
-    #     r3 = requests.post(url, data=payload3)
-    #     time.sleep(random.randint(3))
-    #     r4 = requests.post(url, data=payload4)
-    #     vote += 5
-    #     #headers = {'content-type': 'application/x-www-form-urlencoded'}
-    #     print(r0.json()['list'])
-    #     print(r1.json()['list'])
-    #     print(r2.json()['list'])
-    #     print(r3.json()['list'])
-    #     print(r4.json()['list'])
-    #     print(vote)
