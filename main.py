@@ -45,6 +45,7 @@ payload36 = {'iid': vote_num, 'uid': 'c3f64b93-bc05-4358-9d8f-9d054a03b1a5', 're
 payload37 = {'iid': vote_num, 'uid': '41cea5a1-ab73-477b-8079-6a33e4c2614e', 'react': 'vote'}
 payload38 = {'iid': vote_num, 'uid': '4988ca0c-252f-4c7b-a5f2-b20aaab5de05', 'react': 'vote'}
 payload39 = {'iid': vote_num, 'uid': '8d1af531-36e5-4f04-9416-175a5bdddfe2', 'react': 'vote'}
+payload40 = {'iid': vote_num, 'uid': 'c763a85b-5ed6-4df7-95d8-58ccf2416a70', 'react': 'vote'}
 r0 = requests.post(url, data=payload0)
 r1 = requests.post(url, data=payload1)
 r2 = requests.post(url, data=payload2)
@@ -85,6 +86,7 @@ r36 = requests.post(url, data=payload36)
 r37 = requests.post(url, data=payload37)
 r38 = requests.post(url, data=payload38)
 r39 = requests.post(url, data=payload39)
+r40 = requests.post(url, data=payload40)
 print(r0.json()['list'])
 print(r1.json()['list'])
 print(r2.json()['list'])
@@ -125,6 +127,7 @@ print(r36.json()['list'])
 print(r37.json()['list'])
 print(r38.json()['list'])
 print(r39.json()['list'])
+print(r40.json()['list'])
 while(True):
     t+=1
     time.sleep(1)
@@ -328,6 +331,11 @@ while(True):
         r39 = requests.post(url, data=payload39)
         vote += 1
         print(r39.json()['list'])
+    if time.time()*1000 > int(r40.json()['list']['nextVoteTime']) :
+        time.sleep(1)
+        r40 = requests.post(url, data=payload40)
+        vote += 1
+        print(r40.json()['list'])
     print(vote)
     if t%2 == 0 :
         print('/')
