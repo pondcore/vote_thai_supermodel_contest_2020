@@ -128,6 +128,14 @@ payload.append({'iid': vote_num, 'uid': '7d76a7b1-971e-490a-bf6e-7178eb05d212', 
 payload.append({'iid': vote_num, 'uid': '8b6d08db-31ee-47a4-bd7a-335a34c36f2d', 'react': 'vote'})
 payload.append({'iid': vote_num, 'uid': 'f72c047a-b077-43da-a03e-7705367f9f3a', 'react': 'vote'})
 payload.append({'iid': vote_num, 'uid': '52457bbf-4dd8-46a1-a26e-f2b2cc6c2b3b', 'react': 'vote'})
+payload.append({'iid': vote_num, 'uid': 'fb743259-72d2-4bb5-a8ad-e1b9868952cf', 'react': 'vote'})
+payload.append({'iid': vote_num, 'uid': 'a3aff2d3-bfd6-4c8c-aa69-5eed086864ad', 'react': 'vote'})
+payload.append({'iid': vote_num, 'uid': '7f4a2cdd-787a-4f95-b005-16fe76bd0a80', 'react': 'vote'})
+payload.append({'iid': vote_num, 'uid': 'cfb846a5-69c1-4e5a-890d-168ef3198222', 'react': 'vote'})
+payload.append({'iid': vote_num, 'uid': '4dc6b12b-d78f-4876-b28f-9aa972731880', 'react': 'vote'})
+payload.append({'iid': vote_num, 'uid': 'efec913f-cb58-4676-88dd-d48b08103e04', 'react': 'vote'})
+payload.append({'iid': vote_num, 'uid': '4d1106a2-c077-4154-8c98-93999b887fb3', 'react': 'vote'})
+payload.append({'iid': vote_num, 'uid': 'ada70b71-d9bc-4cd3-bafa-86aaca52e3e0', 'react': 'vote'})
 
 for i in range(len(payload)):
     r.append(requests.post(url, data=payload[i]))
